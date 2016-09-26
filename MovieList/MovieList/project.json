@@ -1,0 +1,12 @@
+﻿{
+  "supports": {},
+  "dependencies": {
+    "Fody": "1.29.4",
+    "FreshMvvm": "2.2.0",
+    "PropertyChanged.Fody": "1.51.3",
+    "Xamarin.Forms": "2.3.2.127"
+  },
+  "frameworks": {
+    ".NETPortable,Version=v4.5,Profile=Profile7": {}
+  }
+}

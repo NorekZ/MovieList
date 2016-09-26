@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using FreshMvvm;
+using MovieList.Configuration;
+using MovieList.Pages;
+using MovieList.ViewModels;
 using Xamarin.Forms;
 
 namespace MovieList
@@ -13,7 +12,9 @@ namespace MovieList
         {
             InitializeComponent();
 
-            MainPage = new MovieList.MainPage();
+            IocConfig.RegisterDependencies();
+
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

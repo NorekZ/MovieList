@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<freshMvvm:FreshBaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:freshMvvm="clr-namespace:FreshMvvm;assembly=FreshMvvm"
+             x:Class="MovieList.Pages.MovieDetailPage"
+             Title="Detail filmu">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="Auto" />
+    </Grid.ColumnDefinitions>
+
+    <Label Text="Název" Grid.Row="0" Grid.Column="0" />
+    <Label Text="{Binding Title}" Grid.Row="0" Grid.Column="1" />
+
+    <Label Text="Původní název" Grid.Row="1" Grid.Column="0" />
+    <Label Text="{Binding OriginalTitle}" Grid.Row="1" Grid.Column="1" />
+    
+    <Label Text="Původní znění" Grid.Row="2" Grid.Column="0" />
+    <Label Text="{Binding OriginalLanguage}" Grid.Row="2" Grid.Column="1" />
+    
+    <Label Text="Datum vydání" Grid.Row="3" Grid.Column="0" />
+    <Label Text="{Binding ReleaseDate}" Grid.Row="3" Grid.Column="1" />
+    
+    <Label Text="Pro dospělé" Grid.Row="4" Grid.Column="0" />
+    <Label Text="{Binding Adult}" Grid.Row="4" Grid.Column="1" />
+    
+    <Label Text="Popularita" Grid.Row="5" Grid.Column="0" />
+    <Label Text="{Binding Popularity}" Grid.Row="5" Grid.Column="1" />
+    
+    <Label Text="Popis" Grid.Row="6" Grid.Column="0" />
+    <Label Text="{Binding Overview}" Grid.Row="6" Grid.Column="1" />
+  </Grid>
+</freshMvvm:FreshBaseContentPage>

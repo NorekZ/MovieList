@@ -5,13 +5,13 @@
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D20D72A8-AFBF-4BAE-881D-9E0E8F58DD8A}</ProjectGuid>
+    <ProjectGuid>{67F9D3A8-F71E-4428-913F-C37AE82CDB24}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MovieList</RootNamespace>
-    <AssemblyName>MovieList</AssemblyName>
+    <RootNamespace>MovieList.Services</RootNamespace>
+    <AssemblyName>MovieList.Services</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <NuGetPackageImportStamp>
@@ -35,56 +35,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Configuration\IocConfig.cs" />
-    <Compile Include="Controls\InfiniteListView.cs" />
-    <Compile Include="Pages\MainPage.cs" />
-    <Compile Include="Pages\MovieDetailPage.xaml.cs">
-      <DependentUpon>MovieDetailPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\MovieListPage.xaml.cs">
-      <DependentUpon>MovieListPage.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Movies\IMovieInfoLoaderService.cs" />
+    <Compile Include="Movies\MovieInfoLoaderService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\MovieBasicInfoViewModel.cs" />
-    <Compile Include="ViewModels\MovieDetailPageModel.cs" />
-    <Compile Include="ViewModels\MovieListPageModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="App.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\MovieListPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\MovieDetailPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="project.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\MovieList.Model\MovieList.Model.csproj">
+    <ProjectReference Include="..\MovieList.Model\MovieList.Model.csproj">
       <Project>{bc56b0fd-2691-428e-af5c-1e550b44dcb8}</Project>
       <Name>MovieList.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\MovieList.Services\MovieList.Services.csproj">
-      <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
-      <Name>MovieList.Services</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="FodyWeavers.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
