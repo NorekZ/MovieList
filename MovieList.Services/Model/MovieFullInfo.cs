@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MovieList.Model
+namespace MovieList.Services.Model
 {
-    public class MovieInfo
+    public class MovieFullInfo
     {
         public int Id { get; set; }
         public string Title { get; set; }

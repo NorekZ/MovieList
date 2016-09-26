@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using MovieList.Model;
+using MovieList.Services.Model;
 
 namespace MovieList.Services.Movies
 {
     public interface IMovieInfoLoaderService
     {
-        Task<IList<MovieInfo>> GetMovieListAsync(string query = null, int offset = 0, int count = 10);
-        Task<MovieInfo> GetMovieDetailAsync(int movieId);
+        Task<IList<MovieBasicInfo>> GetMovieListAsync(string query = null, int page = 0);
+        Task<MovieFullInfo> GetMovieDetailAsync(int movieId);
     }
 }

@@ -35,15 +35,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Helpers\SnakeCasePropertyNamesContractResolver.cs" />
+    <Compile Include="Model\MovieBasicInfo.cs" />
+    <Compile Include="Model\MovieFullInfo.cs" />
     <Compile Include="Movies\IMovieInfoLoaderService.cs" />
     <Compile Include="Movies\MovieInfoLoaderService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MovieList.Model\MovieList.Model.csproj">
-      <Project>{bc56b0fd-2691-428e-af5c-1e550b44dcb8}</Project>
-      <Name>MovieList.Model</Name>
-    </ProjectReference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,6 +1,6 @@
 ﻿using System;
 using FreshMvvm;
-using MovieList.Model;
+using MovieList.Services.Model;
 using MovieList.Services.Movies;
 using PropertyChanged;
 
@@ -37,7 +37,7 @@ namespace MovieList.ViewModels
             }
         }
 
-        private void ShowMovie(MovieInfo movie)
+        private void ShowMovie(MovieFullInfo movie)
         {
             Id = movie.Id;
             Title = movie.Title;
